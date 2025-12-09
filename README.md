@@ -23,42 +23,42 @@ This project demonstrates an end-to-end data pipeline that:
 │  [revenues_per_day.csv]              [OMDb API]                         │
 │         │                                 │                             │
 │         ▼                                 ▼                             │
-│  ┌─────────────────────────────────────────────────┐                   │
-│  │     Python Pipeline (src/)                      │                   │
-│  │     • CSV parsing with data quality handling    │                   │
-│  │     • API enrichment with caching               │                   │
-│  │     • BigQuery loading                          │                   │
-│  └─────────────────────────────────────────────────┘                   │
+│  ┌─────────────────────────────────────────────────┐                    │
+│  │     Python Pipeline (src/)                      │                    │
+│  │     • CSV parsing with data quality handling    │                    │
+│  │     • API enrichment with caching               │                    │
+│  │     • BigQuery loading                          │                    │
+│  └─────────────────────────────────────────────────┘                    │
 │                           │                                             │
 │                           ▼                                             │
-│              ┌────────────────────────┐                                │
-│              │  BigQuery Staging      │                                │
-│              │  • stg_revenues_raw    │                                │
-│              │  • stg_movies_enriched │                                │
-│              └────────────────────────┘                                │
+│              ┌────────────────────────┐                                 │
+│              │  BigQuery Staging      │                                 │
+│              │  • stg_revenues_raw    │                                 │
+│              │  • stg_movies_enriched │                                 │
+│              └────────────────────────┘                                 │
 │                           │                                             │
 │                           ▼                                             │
-│              ┌────────────────────────┐                                │
-│              │  dbt Transformations   │                                │
-│              └────────────────────────┘                                │
+│              ┌────────────────────────┐                                 │
+│              │  dbt Transformations   │                                 │
+│              └────────────────────────┘                                 │
 │                           │                                             │
-│         ┌─────────────────┼─────────────────┐                          │
-│         ▼                 ▼                 ▼                          │
-│    ┌──────────┐    ┌──────────────┐   ┌─────────────────┐             │
-│    │ dim_date │    │  dim_movie   │   │ dim_distributor │             │
-│    └──────────┘    └──────────────┘   └─────────────────┘             │
-│         │                 │                 │                          │
-│         └─────────────────┼─────────────────┘                          │
+│         ┌─────────────────┼─────────────────┐                           │
+│         ▼                 ▼                 ▼                           │
+│    ┌──────────┐    ┌──────────────┐   ┌─────────────────┐               │
+│    │ dim_date │    │  dim_movie   │   │ dim_distributor │               │
+│    └──────────┘    └──────────────┘   └─────────────────┘               │
+│         │                 │                 │                           │
+│         └─────────────────┼─────────────────┘                           │
 │                           ▼                                             │
-│              ┌────────────────────────┐                                │
-│              │  fact_daily_revenue    │                                │
-│              └────────────────────────┘                                │
+│              ┌────────────────────────┐                                 │
+│              │  fact_daily_revenue    │                                 │
+│              └────────────────────────┘                                 │
 │                           │                                             │
 │                           ▼                                             │
-│              ┌────────────────────────┐                                │
-│              │   Looker Studio        │                                │
-│              │   Dashboard            │                                │
-│              └────────────────────────┘                                │
+│              ┌────────────────────────┐                                 │
+│              │   Looker Studio        │                                 │
+│              │   Dashboard            │                                 │
+│              └────────────────────────┘                                 │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -256,7 +256,7 @@ The Looker Studio dashboard provides:
 - **Revenue Trends Over Time** — Time series with date filtering
 - **Top Rated Movies with Revenue** — Combined view of ratings and box office performance
 
-[View Dashboard](https://lookerstudio.google.com/YOUR_DASHBOARD_LINK)
+[View Dashboard](https://lookerstudio.google.com/reporting/dbc501e8-6c64-41cc-a1fa-612e8b501f2d)
 
 ![Dashboard Screenshot](docs/dashboard_screenshot.png)
 
@@ -287,9 +287,9 @@ This assessment demonstrates a working pipeline. For production deployment, I wo
 ┌─────────────────────────────────────────────────────────────┐
 │  Dagster would provide:                                     │
 │  • Asset-based scheduling and dependency management         │
-│  • Built-in retry logic and alerting                       │
-│  • Incremental processing for daily data                   │
-│  • Observability and lineage tracking                      │
+│  • Built-in retry logic and alerting                        │
+│  • Incremental processing for daily data                    │
+│  • Observability and lineage tracking                       │
 └─────────────────────────────────────────────────────────────┘
 ```
 
