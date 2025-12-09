@@ -1,0 +1,13 @@
+# Core
+python-dotenv>=1.0.0
+
+# API calls
+requests>=2.31.0
+
+# GCP / BigQuery
+google-cloud-bigquery>=3.11.0
+pyarrow>=14.0.0
+pandas>=2.0.0
+
+# dbt (install separately or include here)
+dbt-bigquery>=1.7.0

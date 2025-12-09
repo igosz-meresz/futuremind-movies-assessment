@@ -1,0 +1,13 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.git/
+.gitignore
+*.md
+dbt/
+data/raw/*.csv
+data/cache/*.json
+.env
+*.log
+.DS_Store

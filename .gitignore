@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+ENV/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Test Python files
+test_bigquery_loader.py
+test_omdb_client.py
+
+# Environment & secrets
+.env
+.env.local
+*.key
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Data files (keep sample only)
+data/raw/*.csv
+data/cache/*.json
+!data/raw/.gitkeep
+!data/cache/.gitkeep
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+dbt/profiles.yml
+
+# GCP credentials (if stored locally)
+*-credentials.json
+*-service-account.json
+
+# Logs
+*.log
+logs/

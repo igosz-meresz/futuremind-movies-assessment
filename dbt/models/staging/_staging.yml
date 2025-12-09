@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  - name: raw
+    database: futuremind-assesment
+    schema: futuremind_movies
+    tables:
+      - name: stg_revenues_raw
+        description: "Raw daily movie revenue data"
+      - name: stg_movies_enriched
+        description: "Movie metadata from OMDb API"
+
+models:
+  - name: stg_revenues
+    description: "Cleaned revenue data"
+    columns:
+      - name: revenue_id
+        tests:
+          - unique
+          - not_null
+      - name: title
+        tests:
+          - not_null
+
+  - name: stg_movies
+    description: "Cleaned movie metadata"
+    columns:
+      - name: title
+        tests:
+          - unique
+          - not_null
