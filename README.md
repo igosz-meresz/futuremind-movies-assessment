@@ -12,7 +12,7 @@ This project demonstrates an end-to-end data pipeline that:
 4. **Transforms** data into a dimensional model using dbt
 5. **Visualizes** rankings and trends in Looker Studio
 
-![Architecture Diagram](docs/architecture.png)
+![Architecture Diagram - dbdiagram.io](https://dbdiagram.io/d/693966dae877c6307448be34)
 
 ## Architecture
 
@@ -114,7 +114,7 @@ This project demonstrates an end-to-end data pipeline that:
 | **`is_enriched` flag** | Not all movies have OMDb data due to API limits; allows filtering by data completeness |
 | **`revenue_per_theater` in fact** | Pre-calculated for query performance; commonly used metric |
 | **String genre field** | Trade-off for simplicity; in production, would normalize to bridge table |
-| **Top 800 movies enriched** | API rate limit constraint (1,000/day); covers ~95% of total revenue (Pareto principle) |
+| **Top 800 movies enriched** | API rate limit constraint (1,000/day); covers most of total revenue |
 
 ## Project Structure
 
@@ -154,9 +154,6 @@ futuremind-assessment/
 ├── data/
 │   ├── raw/                      # Input CSV (gitignored)
 │   └── cache/                    # OMDb API cache
-│
-├── docs/
-│   └── architecture.md
 │
 └── notebooks/
     └── data_exploration.ipynb    # Basic pandas pyplot data analysis
