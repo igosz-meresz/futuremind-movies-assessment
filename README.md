@@ -155,8 +155,11 @@ futuremind-assessment/
 │   ├── raw/                      # Input CSV (gitignored)
 │   └── cache/                    # OMDb API cache
 │
-└── docs/
-    └── architecture.png
+├── docs/
+│   └── architecture.md
+│
+└── notebooks/
+    └── data_exploration.ipynb    # Basic pandas pyplot data analysis
 ```
 
 ## Setup Instructions
