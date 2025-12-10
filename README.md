@@ -12,7 +12,7 @@ This project demonstrates an end-to-end data pipeline that:
 4. **Transforms** data into a dimensional model using dbt
 5. **Visualizes** rankings and trends in Looker Studio
 
-![Architecture Diagram - dbdiagram.io](https://dbdiagram.io/d/693966dae877c6307448be34)
+[View Architecture Diagram in dbdiagram.io](https://dbdiagram.io/d/693966dae877c6307448be34)
 
 ## Architecture
 
@@ -257,8 +257,6 @@ The Looker Studio dashboard provides:
 - **Top Rated Movies with Revenue** — Combined view of ratings and box office performance
 
 [View Dashboard](https://lookerstudio.google.com/reporting/dbc501e8-6c64-41cc-a1fa-612e8b501f2d)
-
-![Dashboard Screenshot](docs/dashboard_screenshot.png)
 
 ## Containerization
 
